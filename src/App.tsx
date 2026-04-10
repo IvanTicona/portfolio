@@ -1,21 +1,18 @@
-import './App.css'
+import { MainLayout } from './layouts/MainLayout';
+import { About } from './sections/About';
+import { Experience } from './sections/Experience';
+import { Projects } from './sections/Projects';
+import { Contact } from './sections/Contact';
 
 function App() {
   return (
-    <main className="main-container">
-      <section className="card">
-        <h1 className="title">
-          Coming soon
-        </h1>
-        <p className="description">
-          Estoy construyendo mi portfolio. Vuelve pronto 🙂
-        </p>
-        <div className="badge">
-          🚧 En construcción
-        </div>
-      </section>
-    </main>
-  )
+    <MainLayout>
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
+    </MainLayout>
+  );
 }
 
-export default App
+export default App;

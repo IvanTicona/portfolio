@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/* ============================================
+   DESIGN SYSTEM — Dorian Portfolio
+   Tailwind CSS v4 — CSS-first configuration
+   ============================================ */
+
+@theme {
+  /* Typography */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Colors — Dark palette (default) */
+  --color-background: #0F172A;
+  --color-surface: #1E293B;
+  --color-surface-hover: #263548;
+  --color-border: #334155;
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748B;
+  --color-accent: #6366F1;
+  --color-accent-hover: #818CF8;
+  --color-accent-subtle: #6366F11A;
+  --color-cta: #22C55E;
+
+  /* Colors — Light palette overrides (applied via .light class) */
+  --color-light-background: #FAFAFA;
+  --color-light-surface: #FFFFFF;
+  --color-light-surface-hover: #F1F5F9;
+  --color-light-border: #E2E8F0;
+  --color-light-text-primary: #0F172A;
+  --color-light-text-secondary: #475569;
+  --color-light-text-muted: #94A3B8;
+
+  /* Spacing */
+  --spacing-section: 4rem;
+  --spacing-section-mobile: 3rem;
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.6s ease-out both;
+  --animate-fade-up: fade-up 0.6s ease-out both;
+  --animate-slide-in: slide-in 0.4s ease-out both;
+}
+
+/* ============================================
+   KEYFRAMES
+   ============================================ */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   LIGHT MODE — Override CSS variables
+   ============================================ */
+
+html.light {
+  --color-background: var(--color-light-background);
+  --color-surface: var(--color-light-surface);
+  --color-surface-hover: var(--color-light-surface-hover);
+  --color-border: var(--color-light-border);
+  --color-text-primary: var(--color-light-text-primary);
+  --color-text-secondary: var(--color-light-text-secondary);
+  --color-text-muted: var(--color-light-text-muted);
+}
+
+/* ============================================
+   REDUCED MOTION — Accessibility
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   SCROLLBAR — Subtle custom scrollbar
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* ============================================
+   SELECTION
+   ============================================ */
+
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
