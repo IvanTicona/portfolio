@@ -19,13 +19,13 @@ export function About() {
       className="mb-16 lg:mb-24 scroll-mt-24"
     >
       <div
-        className={`transition-all duration-700 ${
+        className={`transition-all duration-700 will-change-transform ${
           isVisible
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-5'
         }`}
       >
-        <h2 className="text-sm font-mono font-medium uppercase tracking-widest text-accent mb-8">
+        <h2 className="text-sm font-mono font-medium uppercase tracking-widest text-accent mb-6">
           {t.about.title}
         </h2>
 
@@ -33,7 +33,11 @@ export function About() {
           {t.about.paragraphs.map((paragraph, index) => (
             <p
               key={index}
-              className="text-text-secondary leading-relaxed"
+              className={`leading-relaxed ${
+                index === 0
+                  ? 'text-text-primary'
+                  : 'text-sm text-text-secondary'
+              }`}
             >
               {paragraph}
             </p>
@@ -45,7 +49,7 @@ export function About() {
           {TECH_STACK.map((tech) => (
             <span
               key={tech}
-              className="text-xs font-mono px-3 py-1.5 rounded-full bg-accent-subtle text-accent border border-accent/10"
+              className="text-xs font-mono px-3 py-1.5 rounded-full bg-accent-subtle text-accent border border-accent/10 transition-colors hover:bg-accent/20 hover:border-accent/25"
             >
               {tech}
             </span>

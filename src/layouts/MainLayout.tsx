@@ -35,12 +35,25 @@ export function MainLayout({ children }: { children: ReactNode }) {
         {/* Right: Scrollable content */}
         <main
           ref={mainRef}
-          className="lg:w-1/2 lg:py-24 lg:px-12 xl:px-16 px-6 pb-24"
+          className="lg:w-1/2 lg:py-24 lg:px-12 xl:px-16 px-6 pt-8 pb-24"
         >
           {children}
 
-          <footer className="border-t border-border mt-16 pt-8 text-center lg:text-left">
-            <p className="text-xs text-text-muted">{t.footer.builtWith}</p>
+          <footer className="border-t border-border mt-16 pt-8 text-center lg:text-left space-y-1">
+            <p className="text-xs text-text-muted">
+              {t.footer.builtWith} · {new Date().getFullYear()}
+            </p>
+            <p className="text-xs text-text-muted">
+              {t.footer.inspired}{' '}
+              <a
+                href="https://brittanychiang.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-secondary hover:text-accent transition-colors"
+              >
+                Brittany Chiang
+              </a>
+            </p>
           </footer>
         </main>
       </div>

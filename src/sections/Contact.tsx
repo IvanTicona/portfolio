@@ -27,13 +27,13 @@ export function Contact() {
       className="mb-16 lg:mb-24 scroll-mt-24"
     >
       <div
-        className={`transition-all duration-700 ${
+        className={`transition-all duration-700 will-change-transform ${
           isVisible
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-5'
         }`}
       >
-        <h2 className="text-sm font-mono font-medium uppercase tracking-widest text-accent mb-8">
+        <h2 className="text-sm font-mono font-medium uppercase tracking-widest text-accent mb-6">
           {t.contact.title}
         </h2>
 

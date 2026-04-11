@@ -39,7 +39,8 @@ export const en: Translation = {
     copied: 'Copied!',
   },
   footer: {
-    builtWith: 'Built with React & Tailwind CSS',
+    builtWith: 'Designed & Built by Dorian Ticona',
+    inspired: 'Loosely inspired by',
   },
 };
 
@@ -82,7 +83,8 @@ export const es: Translation = {
     copied: '¡Copiado!',
   },
   footer: {
-    builtWith: 'Hecho con React & Tailwind CSS',
+    builtWith: 'Diseñado y construido por Dorian Ticona',
+    inspired: 'Inspirado en',
   },
 };
 

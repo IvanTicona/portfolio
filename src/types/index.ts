@@ -34,6 +34,7 @@ export interface Translation {
   };
   footer: {
     builtWith: string;
+    inspired: string;
   };
 }
 

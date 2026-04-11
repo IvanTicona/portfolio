@@ -22,7 +22,7 @@ export function Sidebar() {
         <p className="font-mono text-lg text-text-secondary mt-2">
           {t.hero.role}
         </p>
-        <p className="text-text-secondary mt-4 max-w-xs leading-relaxed text-sm">
+        <p className="text-text-secondary mt-4 max-w-sm leading-relaxed text-sm">
           {t.hero.description}
         </p>
 
@@ -35,15 +35,15 @@ export function Sidebar() {
                   href={`#${item}`}
                   className={`group flex items-center gap-3 py-2 text-sm transition-all ${
                     activeSection === item
-                      ? 'text-text-primary'
+                      ? 'text-accent'
                       : 'text-text-muted hover:text-text-primary'
                   }`}
                 >
                   <span
                     className={`h-px transition-all duration-300 ${
                       activeSection === item
-                        ? 'w-16 bg-text-primary'
-                        : 'w-8 bg-text-muted group-hover:w-16 group-hover:bg-text-primary'
+                        ? 'w-16 bg-accent'
+                        : 'w-8 bg-text-muted group-hover:w-12 group-hover:bg-text-secondary'
                     }`}
                   />
                   <span className="text-xs font-medium uppercase tracking-widest">
