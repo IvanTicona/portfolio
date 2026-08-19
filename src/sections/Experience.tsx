@@ -4,7 +4,10 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import { experiences } from '../data/experience';
 
 function formatDate(dateStr: string, language: 'en' | 'es'): string {
-  const date = new Date(dateStr + '-01');
+  // Build the date in local time. `new Date('YYYY-MM-DD')` parses as UTC and
+  // shifts back a full month once rendered in a negative-offset timezone.
+  const [year, month] = dateStr.split('-').map(Number);
+  const date = new Date(year, month - 1, 1);
   return date.toLocaleDateString(language === 'en' ? 'en-US' : 'es-ES', {
     year: 'numeric',
     month: 'short',
