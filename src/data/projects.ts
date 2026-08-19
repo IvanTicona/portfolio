@@ -1,4 +1,17 @@
 import type { Project } from '../types';
+import thenaFeedback from '../assets/projects/feedback-thena.png';
+import thenaDashboard from '../assets/projects/dashboard-thena.png';
+import thenaLogin from '../assets/projects/login-thena.png';
+import marketingGenerated from '../assets/projects/generated-markt-ai.png';
+import marketingArchitecture from '../assets/projects/arch-markt-ai.png';
+
+// To add screenshots: drop the files in src/assets/projects/, import them here
+// and list them in `images` — they render as thumbnails in that order. Import
+// them — never hardcode a path — so Vite prefixes the `base` from
+// vite.config.ts and the build fails if a file is missing.
+//
+//   import cover from '../assets/projects/thena.webp';
+//   { id: 'thena', /* ... */, images: [cover] }
 
 export const projects: Project[] = [
   {
@@ -9,6 +22,7 @@ export const projects: Project[] = [
       es: 'Sistema de mentoría académica con IA agéntica. Motor cognitivo multi-agente con NestJS y Arquitectura Hexagonal que pre-evalúa tesis con feedback pedagógico en tiempo real. Incluye un pipeline RAG jerárquico con pgvector consultando 3 capas contextuales.',
     },
     tags: ['NestJS', 'React', 'PostgreSQL', 'pgvector', 'RAG', 'Clean Architecture'],
+    images: [thenaLogin, thenaDashboard, thenaFeedback],
     repoUrl: 'https://github.com/IvanTicona/thena',
     featured: true,
   },
@@ -20,6 +34,7 @@ export const projects: Project[] = [
       es: '1er Lugar en un desafío de innovación corporativa. Construí el frontend de una herramienta de IA Generativa junto a un Arquitecto de Software Senior. Diseñé la UI con React y Ant Design, traduciendo configuraciones complejas de agentes en un dashboard intuitivo bajo plazos ajustados.',
     },
     tags: ['React', 'Ant Design', 'Generative AI', '1st Place'],
+    images: [marketingGenerated, marketingArchitecture],
     featured: true,
   },
   {

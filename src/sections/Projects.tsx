@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { GitHubIcon } from '../components/Icons';
+import { Lightbox } from '../components/Lightbox';
 import { useLanguage } from '../hooks/useLanguage';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { projects } from '../data/projects';
@@ -9,6 +11,13 @@ const ACHIEVEMENT_TAGS = ['1st Place'];
 export function Projects() {
   const { language, t } = useLanguage();
   const [ref, isVisible] = useScrollReveal<HTMLElement>();
+  const [gallery, setGallery] = useState<{ id: string; index: number } | null>(
+    null,
+  );
+
+  const openProject = gallery
+    ? projects.find((p) => p.id === gallery.id)
+    : undefined;
 
   return (
     <section
@@ -32,6 +41,7 @@ export function Projects() {
             .filter((p) => p.featured)
             .map((project) => {
               const primaryUrl = project.liveUrl || project.repoUrl;
+              const images = project.images ?? [];
 
               return (
                 <div
@@ -107,11 +117,52 @@ export function Projects() {
                       </span>
                     ))}
                   </div>
+
+                  {/* Screenshots. z-20 lifts them above the full-card link
+                      overlay, otherwise the click would follow the link. */}
+                  {images.length > 0 && (
+                    <div className="relative z-20 mt-4 grid grid-cols-3 gap-2">
+                      {images.map((src, index) => (
+                        <button
+                          key={src}
+                          type="button"
+                          onClick={() =>
+                            setGallery({ id: project.id, index })
+                          }
+                          aria-label={t.projects.imageAlt
+                            .replace('{title}', project.title)
+                            .replace('{n}', String(index + 1))
+                            .replace('{total}', String(images.length))}
+                          className="cursor-pointer overflow-hidden rounded border border-border hover:border-accent/50 transition-colors"
+                        >
+                          <img
+                            src={src}
+                            alt=""
+                            loading="lazy"
+                            decoding="async"
+                            width={320}
+                            height={180}
+                            className="w-full aspect-video object-cover transition-transform duration-300 hover:scale-105"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               );
             })}
         </div>
       </div>
+
+      {gallery && openProject?.images && (
+        <Lightbox
+          images={openProject.images}
+          title={openProject.title}
+          index={gallery.index}
+          onIndexChange={(index) => setGallery({ ...gallery, index })}
+          onClose={() => setGallery(null)}
+        />
+      )}
     </section>
   );
 }
