@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#6366F1" />
+  <!-- "D" drawn as a path, not <text>: a favicon cannot rely on the host
+       having any particular font installed. -->
+  <path
+    fill="#F8FAFC"
+    fill-rule="evenodd"
+    d="M18 16 H30 A16 16 0 0 1 30 48 H18 Z M26 24 H30 A8 8 0 0 1 30 40 H26 Z"
+  />
+</svg>
