@@ -1,4 +1,10 @@
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  type ReactNode,
+} from 'react';
 import type { Language, Translation } from '../types';
 import { translations } from '../data/translations';
 
@@ -18,13 +24,16 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     return navigator.language.startsWith('es') ? 'es' : 'en';
   });
 
+  // Runs on mount too, so <html lang> matches the stored or detected language
+  // instead of staying on the value hardcoded in index.html until the first
+  // toggle. Kept out of the state updater: StrictMode invokes it twice.
+  useEffect(() => {
+    document.documentElement.lang = language;
+    localStorage.setItem('portfolio-lang', language);
+  }, [language]);
+
   const toggleLanguage = () => {
-    setLanguage((prev) => {
-      const next = prev === 'en' ? 'es' : 'en';
-      localStorage.setItem('portfolio-lang', next);
-      document.documentElement.lang = next;
-      return next;
-    });
+    setLanguage((prev) => (prev === 'en' ? 'es' : 'en'));
   };
 
   return (

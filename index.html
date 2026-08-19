@@ -2,15 +2,23 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/portfolio/vite.svg" />
+    <!-- No `base` prefix here: Vite prepends it. Writing /portfolio/... yields
+         /portfolio/portfolio/... which the dev server answers with index.html. -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Dorian's Portfolio — Software Developer" />
     <meta name="theme-color" content="#0F172A" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph. Absolute URLs on purpose: crawlers resolve these without a
+         document base, so a relative path silently yields no preview. -->
     <meta property="og:title" content="Dorian — Software Developer" />
     <meta property="og:description" content="Portfolio showcasing my work and experience" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ivanticona.github.io/portfolio/" />
+    <meta property="og:image" content="https://ivanticona.github.io/portfolio/og-image.png" />
+    <meta property="og:image:alt" content="Dorian Ticona — portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Fonts: Inter + JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
