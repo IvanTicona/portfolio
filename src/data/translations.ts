@@ -11,15 +11,15 @@ export const en: Translation = {
     greeting: "Hi, I'm",
     role: 'Fullstack Developer',
     description:
-      'Systems Engineering student, ICPC Latin America Regionalist, and competitive programmer. I build scalable systems with clean architecture and a passion for solving complex problems.',
+      'Systems Engineering student and ICPC Latin America regionalist. Most recently: a RAG system in NestJS, the backend of a fintech card-issuing platform, and a Vue-to-Next.js migration.',
     cta: 'View my work',
   },
   about: {
     title: 'About me',
     paragraphs: [
-      "I'm a performance-driven Fullstack Engineer and Systems Engineering student with a strong foundation in algorithms and data structures. As an ICPC Latin America Regionalist (Top 8 National), I specialize in solving complex edge cases and optimizing logic.",
-      "I've modernized legacy systems (Vue to Next.js), built production-ready Fintech applications, and I'm currently implementing Clean Architecture in NestJS while exploring RAG systems with embeddings and vector search to solve real-world academic challenges.",
-      "When I'm not coding, you'll find me mentoring students in advanced algorithms, competing in programming contests, or pushing the boundaries of what AI can do in education.",
+      "I'm a Systems Engineering student and a competitive programmer. I made it to the ICPC Latin America regional (Top 8 national team), and I was a teaching assistant for Data Structures & Algorithms at UPB, reviewing assignments and exams alongside the lead professor.",
+      'At WaveWare I migrated COMPASS from Vue.js to Next.js and designed its MongoDB schemas and Express endpoints. At SLAN I worked on the backend of the Card Management System: REST APIs covering the full card lifecycle, integrated with the UnDosTres backoffice for physical and virtual card issuance.',
+      "Right now I'm working on Thena: an academic mentorship system in NestJS with Hexagonal Architecture and a RAG pipeline over pgvector. It's where I'm learning embeddings and vector search by actually building with them.",
     ],
   },
   experience: {
@@ -29,6 +29,11 @@ export const en: Translation = {
     title: 'Projects',
     viewProject: 'Live demo',
     viewCode: 'Source code',
+    openGallery: 'view screenshots',
+    closeGallery: 'Close gallery',
+    previousImage: 'Previous image',
+    nextImage: 'Next image',
+    imageAlt: '{title} — screenshot {n} of {total}',
   },
   contact: {
     title: "Let's connect",
@@ -55,15 +60,15 @@ export const es: Translation = {
     greeting: 'Hola, soy',
     role: 'Desarrollador Fullstack',
     description:
-      'Estudiante de Ingeniería de Sistemas, ICPC Latin America Regionalist y programador competitivo. Construyo sistemas escalables con arquitectura limpia y pasión por resolver problemas complejos.',
+      'Estudiante de Ingeniería de Sistemas y regionalista de ICPC Latinoamérica. Lo más reciente: un sistema RAG en NestJS, el backend de una plataforma fintech de emisión de tarjetas y una migración de Vue a Next.js.',
     cta: 'Ver mi trabajo',
   },
   about: {
     title: 'Sobre mí',
     paragraphs: [
-      'Soy un Ingeniero Fullstack orientado al rendimiento y estudiante de Ingeniería de Sistemas con una base sólida en algoritmos y estructuras de datos. Como ICPC Latin America Regionalist (Top 8 Nacional), me especializo en resolver casos borde complejos y optimizar lógica.',
-      'He modernizado sistemas legacy (Vue a Next.js), construido aplicaciones Fintech listas para producción, y actualmente estoy implementando Clean Architecture en NestJS mientras exploro sistemas RAG con embeddings y búsqueda vectorial para resolver desafíos académicos reales.',
-      'Cuando no estoy programando, me encontrarás mentoreando estudiantes en algoritmos avanzados, compitiendo en concursos de programación o empujando los límites de lo que la IA puede hacer en educación.',
+      'Estudio Ingeniería de Sistemas y compito en programación. Llegué al regional de ICPC Latinoamérica (Top 8 nacional) y fui auxiliar de Estructuras de Datos y Algoritmos en la UPB, revisando tareas y exámenes junto al docente titular.',
+      'En WaveWare migré COMPASS de Vue.js a Next.js y diseñé sus schemas de MongoDB y endpoints en Express. En SLAN trabajé en el backend del Sistema de Gestión de Tarjetas: APIs REST para todo el ciclo de vida de la tarjeta, integradas con el backoffice de UnDosTres para emisión de tarjetas físicas y virtuales.',
+      'Ahora estoy trabajando en Thena: un sistema de mentoría académica en NestJS con Arquitectura Hexagonal y un pipeline RAG sobre pgvector. Es donde estoy aprendiendo embeddings y búsqueda vectorial construyendo con ellos.',
     ],
   },
   experience: {
@@ -73,6 +78,11 @@ export const es: Translation = {
     title: 'Proyectos',
     viewProject: 'Ver demo',
     viewCode: 'Código fuente',
+    openGallery: 'ver capturas',
+    closeGallery: 'Cerrar galería',
+    previousImage: 'Imagen anterior',
+    nextImage: 'Imagen siguiente',
+    imageAlt: '{title} — captura {n} de {total}',
   },
   contact: {
     title: 'Conectemos',

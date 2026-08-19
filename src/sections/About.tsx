@@ -3,7 +3,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const TECH_STACK = [
   'TypeScript', 'JavaScript', 'C++', 'Python',
-  'React', 'Next.js', 'Flutter', 'Tailwind CSS',
+  'React', 'Next.js', 'React Native', 'Tailwind CSS',
   'NestJS', 'Express.js', 'Node.js', 'Prisma',
   'PostgreSQL', 'MongoDB', 'Docker', 'AWS',
 ];

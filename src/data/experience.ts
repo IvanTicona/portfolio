@@ -5,16 +5,16 @@ export const experiences: Experience[] = [
     id: 'slan',
     company: 'SLAN - Servicios Financieros',
     role: {
-      en: 'Fullstack Developer',
-      es: 'Desarrollador Fullstack',
+      en: 'Backend Developer',
+      es: 'Desarrollador Backend',
     },
     description: {
-      en: 'Built a production-ready Flutter banking app from high-fidelity mockups. Architected the Card Management System backend, integrating with the UnDosTres backoffice for physical and virtual card issuance. Designed secure RESTful APIs for the entire card lifecycle in an Agile environment.',
-      es: 'Construí una app bancaria en Flutter lista para producción a partir de mockups. Arquitecté el backend del Sistema de Gestión de Tarjetas, integrando con el backoffice UnDosTres para emisión de tarjetas físicas y virtuales. Diseñé APIs RESTful seguras para todo el ciclo de vida de tarjetas en un entorno Ágil.',
+      en: 'Built the backend for the Card Management System, integrating with the UnDosTres backoffice to enable issuance and management of physical and virtual cards. Designed secure RESTful endpoints covering the entire card lifecycle, working in an Agile environment.',
+      es: 'Construí el backend del Sistema de Gestión de Tarjetas, integrando con el backoffice de UnDosTres para habilitar la emisión y gestión de tarjetas físicas y virtuales. Diseñé endpoints RESTful seguros para todo el ciclo de vida de la tarjeta, trabajando en un entorno Ágil.',
     },
     startDate: '2025-09',
-    endDate: '2026-02',
-    tags: ['Flutter', 'NestJS', 'REST APIs', 'Fintech'],
+    endDate: '2026-07',
+    tags: ['NestJS', 'REST APIs', 'Backend', 'Fintech'],
   },
   {
     id: 'upb-ta',

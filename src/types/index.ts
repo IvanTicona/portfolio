@@ -24,6 +24,12 @@ export interface Translation {
     title: string;
     viewProject: string;
     viewCode: string;
+    openGallery: string;
+    closeGallery: string;
+    previousImage: string;
+    nextImage: string;
+    /** Placeholders: {title}, {n}, {total} */
+    imageAlt: string;
   };
   contact: {
     title: string;
@@ -43,7 +49,8 @@ export interface Project {
   title: string;
   description: Record<Language, string>;
   tags: string[];
-  imageUrl?: string;
+  /** All of them render as thumbnails on the card, in this order. */
+  images?: string[];
   liveUrl?: string;
   repoUrl?: string;
   featured?: boolean;
